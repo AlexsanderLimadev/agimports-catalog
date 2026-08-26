@@ -1,0 +1,6 @@
+[install]
+saveTextLockfile = true
+# Trava de segurança de 24h: ignora versões de pacotes publicadas há menos de um dia.
+minimumReleaseAge = 86400
+# Lista de exceções vazia para manter o padrão do projeto limpo.
+minimumReleaseAgeExcludes = []
