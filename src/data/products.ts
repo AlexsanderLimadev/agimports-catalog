@@ -1011,7 +1011,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/898b3697-8496-4022-9e30-efe15d7dff7e/polo-ralph-lauren-01.jpg"
+      "/produtos/polo-ralph-lauren/1.webp"
     ],
     "available": true,
     "featured": true,
@@ -1025,7 +1025,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/cb130e6b-0e3f-42c4-b951-7e07b2fe3937/polo-ralph-lauren-02.jpg"
+      "/produtos/polo-ralph-lauren/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -1039,7 +1039,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/c820a81e-2433-4e3d-bf56-6616b0ba704c/polo-ralph-lauren-03.jpg"
+      "/produtos/polo-ralph-lauren/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -1053,7 +1053,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/4dfdcaed-5b25-4473-bc01-19f551bc1edc/polo-ralph-lauren-04.jpg"
+      "/produtos/polo-ralph-lauren/4.webp"
     ],
     "available": true,
     "featured": false,
@@ -1067,7 +1067,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/f4570018-0087-4c09-8541-aefbccaa1dba/polo-ralph-lauren-05.jpg"
+      "/produtos/polo-ralph-lauren/5.webp"
     ],
     "available": true,
     "featured": false,
@@ -1081,7 +1081,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/5bd303a8-0f1d-4553-b783-a133e326f30f/polo-ralph-lauren-06.jpg"
+      "/produtos/polo-ralph-lauren/6.webp"
     ],
     "available": true,
     "featured": false,
@@ -1095,7 +1095,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/6a69a3a2-bc14-4293-a099-74d8d97dc6d3/polo-ralph-lauren-07.jpg"
+      "/produtos/polo-ralph-lauren/7.webp"
     ],
     "available": true,
     "featured": false,
@@ -1109,7 +1109,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/fcd26ae9-7ad0-40eb-8ff1-69832b18965f/polo-ralph-lauren-08.jpg"
+      "/produtos/polo-ralph-lauren/8.webp"
     ],
     "available": true,
     "featured": false,
@@ -1123,7 +1123,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/c9af0560-37df-4f15-8a3c-b5285820dddd/polo-ralph-lauren-09.jpg"
+      "/produtos/polo-ralph-lauren/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -1137,7 +1137,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/a8c68ce8-f6d5-4cbf-bf9b-3e68cbe0c0d4/polo-ralph-lauren-10.jpg"
+      "/produtos/polo-ralph-lauren/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -1151,7 +1151,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/473d8432-8730-47c3-bc3d-a122ff8a9d5d/polo-ralph-lauren-11.jpg"
+      "/produtos/polo-ralph-lauren/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -1165,7 +1165,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/d1cb21a9-f3ce-4ec5-8f78-def4a5c89be9/polo-ralph-lauren-12.jpg"
+      "/produtos/polo-ralph-lauren/4.webp"
     ],
     "available": true,
     "featured": false,
@@ -1179,7 +1179,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/0eeef665-82a0-4b41-b3a0-c76228b4bfa1/polo-ralph-lauren-13.jpg"
+      "/produtos/polo-ralph-lauren/5.webp"
     ],
     "available": true,
     "featured": false,
@@ -1193,7 +1193,7 @@ export const products: Product[] = [
     "category": "polo-ralph-lauren",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/84c260ee-b108-45d6-b6a9-bd8f2f739b0d/polo-ralph-lauren-14.jpg"
+      "/produtos/polo-ralph-lauren/6.webp"
     ],
     "available": true,
     "featured": false,
@@ -1515,7 +1515,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/d4f3d086-9cc6-4e4b-8e37-880f76502c01/birkenstocks-01.png"
+      "/produtos/birkenstocks/1.webp"
     ],
     "available": true,
     "featured": true,
@@ -1529,7 +1529,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/14b8f7a1-fe53-4c85-967b-90892e2a3232/birkenstocks-02.png"
+      "/produtos/birkenstocks/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -1543,7 +1543,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/be05508c-ec25-483d-8569-29d301419e4d/birkenstocks-03.png"
+      "/produtos/birkenstocks/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -1557,7 +1557,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/e873443f-f784-4232-a507-f7990182fd32/birkenstocks-04.png"
+      "/produtos/birkenstocks/4.webp"
     ],
     "available": true,
     "featured": false,
@@ -1571,7 +1571,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/d4a7b284-aaa1-4d23-9bfc-9d3fe02ed8d8/birkenstocks-05.png"
+      "/produtos/birkenstocks/5.webp"
     ],
     "available": true,
     "featured": false,
@@ -1585,7 +1585,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/97491686-3d46-497f-90cd-3864e06d5f14/birkenstocks-06.png"
+      "/produtos/birkenstocks/6.webp"
     ],
     "available": true,
     "featured": false,
@@ -1599,7 +1599,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/e138544b-73fd-4ee0-803b-230e05afe126/birkenstocks-07.png"
+      "/produtos/birkenstocks/7.webp"
     ],
     "available": true,
     "featured": false,
@@ -1613,7 +1613,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/1528cb31-47f4-452c-bf0d-c3e846093c13/birkenstocks-08.png"
+      "/produtos/birkenstocks/8.webp"
     ],
     "available": true,
     "featured": false,
@@ -1627,7 +1627,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/508b0980-9caa-474e-b176-0f923d11f431/birkenstocks-09.png"
+      "/produtos/birkenstocks/9.webp"
     ],
     "available": true,
     "featured": false,
@@ -1641,7 +1641,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/5d30149c-b222-4056-a0eb-d94e57f6ee4f/birkenstocks-10.png"
+      "/produtos/birkenstocks/10.webp"
     ],
     "available": true,
     "featured": false,
@@ -1655,7 +1655,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/0dd2168b-a5de-4e17-864b-fe83b1bae24a/birkenstocks-11.png"
+      "/produtos/birkenstocks/11.webp"
     ],
     "available": true,
     "featured": false,
@@ -1669,7 +1669,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/5f0a9927-8998-4c46-952f-160726c97d94/birkenstocks-12.png"
+      "/produtos/birkenstocks/12.webp"
     ],
     "available": true,
     "featured": false,
@@ -1683,7 +1683,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/8e934855-a09c-44a5-9734-9b9b4670f821/birkenstocks-13.png"
+      "/produtos/birkenstocks/13.webp"
     ],
     "available": true,
     "featured": false,
@@ -1697,7 +1697,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/38a686c0-6874-4bf6-aadb-fe6e2539f78b/birkenstocks-14.png"
+      "/produtos/birkenstocks/14.webp"
     ],
     "available": true,
     "featured": false,
@@ -1711,7 +1711,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/30a2588e-db0e-474e-98b1-e2c94ff45782/birkenstocks-15.png"
+      "/produtos/birkenstocks/15.webp"
     ],
     "available": true,
     "featured": false,
@@ -1725,7 +1725,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/00254eed-6dc8-4877-bd2e-2133a298ae09/birkenstocks-16.png"
+      "/produtos/birkenstocks/16.webp"
     ],
     "available": true,
     "featured": false,
@@ -1739,7 +1739,7 @@ export const products: Product[] = [
     "category": "birkenstocks",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/2527d4c1-1610-4fac-8ea3-bd2916c2597c/birkenstocks-17.png"
+      "/produtos/birkenstocks/17.webp"
     ],
     "available": true,
     "featured": false,
@@ -1753,7 +1753,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/313ec332-3276-435a-b109-eb7636f0231c/tenis-01.png"
+      "/produtos/tenis/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -1767,7 +1767,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/23cd5efd-4804-4db1-893f-250e813843fc/tenis-02.png"
+      "/produtos/tenis/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -1781,7 +1781,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/74d19159-a1a2-41ae-9a97-d00b46b476be/tenis-03.png"
+      "/produtos/tenis/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -1795,7 +1795,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/2f40f0fd-17ea-4c02-92dc-64a5c0f75ada/tenis-04.png"
+      "/produtos/tenis/4.webp"
     ],
     "available": true,
     "featured": false,
@@ -1809,7 +1809,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/451d184d-ee50-4b62-a2b4-89098d369ca4/tenis-05.png"
+      "/produtos/tenis/5.webp"
     ],
     "available": true,
     "featured": false,
@@ -1823,7 +1823,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/577c1538-680e-4faa-9a73-e984b3f0e6f8/tenis-06.png"
+      "/produtos/tenis/6.webp"
     ],
     "available": true,
     "featured": false,
@@ -1837,7 +1837,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/b9807c99-affe-4637-8b9b-ddc0741e7334/tenis-07.png"
+      "/produtos/tenis/7.webp"
     ],
     "available": true,
     "featured": false,
@@ -1851,7 +1851,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/910f882b-898e-4d02-8b55-8187969d407e/tenis-08.png"
+      "/produtos/tenis/8.webp"
     ],
     "available": true,
     "featured": false,
@@ -1865,7 +1865,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/92f632b8-0ba1-4406-bca3-42615cf01122/tenis-09.png"
+      "/produtos/tenis/9.webp"
     ],
     "available": true,
     "featured": false,
@@ -1879,7 +1879,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/adc5600a-7530-486e-88d2-81a2d014d4f4/tenis-10.jpg"
+      "/produtos/tenis/10.webp"
     ],
     "available": true,
     "featured": false,
@@ -1893,7 +1893,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/dcaec28e-ef98-4a17-b96f-29fe8ec9f545/tenis-11.jpg"
+      "/produtos/tenis/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -1907,7 +1907,7 @@ export const products: Product[] = [
     "category": "tenis",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/bbc7e4ac-4975-4ad6-aca0-0cf6674a0646/tenis-12.jpg"
+      "/produtos/tenis/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2327,7 +2327,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/b532a6de-bd0a-45cb-8693-9cc3d4cd3690/bolsas-femininas-01.jpg"
+      "/produtos/bolsas-femininas/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2341,7 +2341,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/ba4c4bd4-7f69-46ae-b732-9e3f0c2c95ba/bolsas-femininas-02.jpg"
+      "/produtos/bolsas-femininas/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2355,7 +2355,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/11e7cc29-dbe3-4d44-afdf-f2a095ab9ca9/bolsas-femininas-03.jpg"
+      "/produtos/bolsas-femininas/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -2369,7 +2369,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/5e27e636-19d6-48e3-83ba-2e96c9fb49e9/bolsas-femininas-04.jpg"
+      "/produtos/bolsas-femininas/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2383,7 +2383,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/23ad744b-f788-4e18-abdf-d47872bdad92/bolsas-femininas-05.jpg"
+      "/produtos/bolsas-femininas/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2397,7 +2397,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/47697c5b-8294-4912-bd79-00b575f7ccfa/bolsas-femininas-06.jpg"
+      "/produtos/bolsas-femininas/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -2411,7 +2411,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/96c61016-4674-49c7-8519-5cf24039bc9a/bolsas-femininas-07.jpg"
+      "/produtos/bolsas-femininas/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2425,7 +2425,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/0d8ddfeb-e572-43e6-badd-8354280716c1/bolsas-femininas-08.jpg"
+      "/produtos/bolsas-femininas/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2439,7 +2439,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/c7782273-fc9b-43bd-8385-1bd0e9f2481b/bolsas-femininas-09.jpg"
+      "/produtos/bolsas-femininas/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -2453,7 +2453,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/d0e24618-32fb-4b72-be29-a7ea18bd45d6/bolsas-femininas-10.jpg"
+      "/produtos/bolsas-femininas/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2467,7 +2467,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/882854af-d741-44ad-9c06-50df1c1a8d07/bolsas-femininas-11.jpg"
+      "/produtos/bolsas-femininas/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2481,7 +2481,7 @@ export const products: Product[] = [
     "category": "bolsas-femininas",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/67c69870-6d83-42c4-b79b-04c5eb70df2e/bolsas-femininas-12.webp"
+      "/produtos/bolsas-femininas/3.webp"
     ],
     "available": true,
     "featured": false,
@@ -2747,7 +2747,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/5314f40f-332f-446b-a893-366ffb8e5d6b/f1-01.jpg"
+      "/produtos/f1/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2761,7 +2761,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/4bcc1500-234b-47f5-89ab-debe91984c51/f1-02.jpg"
+      "/produtos/f1/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2775,7 +2775,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/21af07bf-a524-49ed-b935-24dc1e417af6/f1-03.jpg"
+      "/produtos/f1/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2789,7 +2789,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/74f8021e-0ac5-4296-9e27-5f2b7771a652/f1-04.jpg"
+      "/produtos/f1/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2803,7 +2803,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/cd8841ed-44a6-4d1a-9e6e-a26aaa822840/f1-05.jpg"
+      "/produtos/f1/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2817,7 +2817,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/69b7caee-aee3-4bbf-a1fd-48279128cfbe/f1-06.jpg"
+      "/produtos/f1/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2831,7 +2831,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/3afd4fdd-2c21-4fe2-a24f-44a2906f9645/f1-07.jpg"
+      "/produtos/f1/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2845,7 +2845,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/23d65b41-e651-447c-97d8-c96b6569579b/f1-08.jpg"
+      "/produtos/f1/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2859,7 +2859,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/a830c1c7-5f06-4990-bc0f-1b550c7922db/f1-09.jpg"
+      "/produtos/f1/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2873,7 +2873,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/a6efd659-91a0-4f25-a856-5ae54f9e96ff/f1-10.jpg"
+      "/produtos/f1/2.webp"
     ],
     "available": true,
     "featured": false,
@@ -2887,7 +2887,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/91e329a3-5484-4da2-9f5a-7b19522a6b93/f1-11.jpg"
+      "/produtos/f1/1.webp"
     ],
     "available": true,
     "featured": false,
@@ -2901,7 +2901,7 @@ export const products: Product[] = [
     "category": "f1",
     "price": null,
     "images": [
-      "/__l5e/assets-v1/fd074e22-7c0c-4ab1-bb96-f161881078fe/f1-12.jpg"
+      "/produtos/f1/2.webp"
     ],
     "available": true,
     "featured": false,

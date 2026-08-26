@@ -30,7 +30,7 @@ export const categories: Category[] = [
     "slug": "polo-ralph-lauren",
     "name": "Polo Ralph Lauren",
     "description": "Clássicos Polo Ralph Lauren.",
-    "image": "/__l5e/assets-v1/898b3697-8496-4022-9e30-efe15d7dff7e/polo-ralph-lauren-01.jpg"
+    "image": "/produtos/polo-ralph-lauren/1.webp"
   },
   {
     "id": "04",
@@ -51,14 +51,14 @@ export const categories: Category[] = [
     "slug": "birkenstocks",
     "name": "Birkenstocks",
     "description": "Birkenstock originais.",
-    "image": "/__l5e/assets-v1/d4f3d086-9cc6-4e4b-8e37-880f76502c01/birkenstocks-01.png"
+    "image": "/produtos/birkenstocks/1.webp"
   },
   {
     "id": "07",
     "slug": "tenis",
     "name": "Tênis",
     "description": "Tênis importados.",
-    "image": "/__l5e/assets-v1/313ec332-3276-435a-b109-eb7636f0231c/tenis-01.png"
+    "image": "/produtos/tenis/1.webp"
   },
   {
     "id": "08",
@@ -72,7 +72,7 @@ export const categories: Category[] = [
     "slug": "bolsas-femininas",
     "name": "BOLSAS FEMININAS 🎀",
     "description": "Bolsas femininas.",
-    "image": "/__l5e/assets-v1/b532a6de-bd0a-45cb-8693-9cc3d4cd3690/bolsas-femininas-01.jpg"
+    "image": "/produtos/bolsas-femininas/1.webp"
   },
   {
     "id": "10",
@@ -86,7 +86,7 @@ export const categories: Category[] = [
     "slug": "f1",
     "name": "F1",
     "description": "Linha F1.",
-    "image": "/__l5e/assets-v1/5314f40f-332f-446b-a893-366ffb8e5d6b/f1-01.jpg"
+    "image": "/produtos/f1/1.webp"
   },
   {
     "id": "12",

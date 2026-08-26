@@ -20,6 +20,9 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# Credencial da Service Account do Google Drive — NUNCA versionar
+credentials.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
