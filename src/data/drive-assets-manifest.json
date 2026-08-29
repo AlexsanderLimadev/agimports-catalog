@@ -1,118 +1,18 @@
 {
-  "Comme des Garçons Play": [
-    "/produtos/comme-des-garcons-play/1.webp",
-    "/produtos/comme-des-garcons-play/2.webp",
-    "/produtos/comme-des-garcons-play/3.webp",
-    "/produtos/comme-des-garcons-play/4.webp"
-  ],
-  "LOEWE": [
-    "/produtos/loewe/1.webp",
-    "/produtos/loewe/2.webp"
-  ],
-  "Óculos Blue Blocker ": [
-    "/produtos/oculos-blue-blocker/1.webp",
-    "/produtos/oculos-blue-blocker/2.webp",
-    "/produtos/oculos-blue-blocker/3.webp",
-    "/produtos/oculos-blue-blocker/4.webp"
-  ],
-  "Acessórios ": [
-    "/produtos/acessorios/1.webp",
-    "/produtos/acessorios/2.webp",
-    "/produtos/acessorios/3.webp",
-    "/produtos/acessorios/4.webp",
-    "/produtos/acessorios/5.webp"
-  ],
-  "Tênis": [
-    "/produtos/tenis/1.webp",
-    "/produtos/tenis/2.webp",
-    "/produtos/tenis/3.webp",
-    "/produtos/tenis/4.webp",
-    "/produtos/tenis/5.webp",
-    "/produtos/tenis/6.webp",
-    "/produtos/tenis/7.webp",
-    "/produtos/tenis/8.webp",
-    "/produtos/tenis/9.webp",
-    "/produtos/tenis/10.webp"
-  ],
-  "Birkenstocks": [
-    "/produtos/birkenstocks/1.webp",
-    "/produtos/birkenstocks/2.webp",
-    "/produtos/birkenstocks/3.webp",
-    "/produtos/birkenstocks/4.webp",
-    "/produtos/birkenstocks/5.webp",
-    "/produtos/birkenstocks/6.webp",
-    "/produtos/birkenstocks/7.webp",
-    "/produtos/birkenstocks/8.webp",
-    "/produtos/birkenstocks/9.webp",
-    "/produtos/birkenstocks/10.webp",
-    "/produtos/birkenstocks/11.webp",
-    "/produtos/birkenstocks/12.webp",
-    "/produtos/birkenstocks/13.webp",
-    "/produtos/birkenstocks/14.webp",
-    "/produtos/birkenstocks/15.webp",
-    "/produtos/birkenstocks/16.webp",
-    "/produtos/birkenstocks/17.webp"
-  ],
-  "BOLSAS FEMININAS 🎀": [
-    "/produtos/bolsas-femininas/1.webp",
-    "/produtos/bolsas-femininas/2.webp",
-    "/produtos/bolsas-femininas/3.webp"
-  ],
+  "Comme des Garçons Play": ["/produtos/comme-des-garcons-play/1.webp","/produtos/comme-des-garcons-play/2.webp","/produtos/comme-des-garcons-play/3.webp","/produtos/comme-des-garcons-play/4.webp"],
+  "LOEWE": ["/produtos/loewe/1.webp","/produtos/loewe/2.webp"],
+  "Óculos Blue Blocker": ["/produtos/oculos-blue-blocker/1.webp","/produtos/oculos-blue-blocker/2.webp","/produtos/oculos-blue-blocker/3.webp","/produtos/oculos-blue-blocker/4.webp"],
+  "Acessórios": ["/produtos/acessorios/1.webp","/produtos/acessorios/2.webp","/produtos/acessorios/3.webp","/produtos/acessorios/4.webp","/produtos/acessorios/5.webp"],
+  "Tênis": ["/produtos/tenis/1.webp","/produtos/tenis/2.webp","/produtos/tenis/3.webp","/produtos/tenis/4.webp","/produtos/tenis/5.webp","/produtos/tenis/6.webp","/produtos/tenis/7.webp","/produtos/tenis/8.webp","/produtos/tenis/9.webp","/produtos/tenis/10.webp"],
+  "Birkenstocks": ["/produtos/birkenstocks/1.webp","/produtos/birkenstocks/2.webp","/produtos/birkenstocks/3.webp","/produtos/birkenstocks/4.webp","/produtos/birkenstocks/5.webp","/produtos/birkenstocks/6.webp","/produtos/birkenstocks/7.webp","/produtos/birkenstocks/8.webp","/produtos/birkenstocks/9.webp","/produtos/birkenstocks/10.webp","/produtos/birkenstocks/11.webp","/produtos/birkenstocks/12.webp","/produtos/birkenstocks/13.webp","/produtos/birkenstocks/14.webp","/produtos/birkenstocks/15.webp","/produtos/birkenstocks/16.webp","/produtos/birkenstocks/17.webp"],
+  "BOLSAS FEMININAS 🎀": ["/produtos/bolsas-femininas/1.webp","/produtos/bolsas-femininas/2.webp","/produtos/bolsas-femininas/3.webp"],
   "FEMININO 🎀": [],
-  "Camisetas de time ": [],
+  "Camisetas de time": [],
   "VILEBREQUIN": [],
-  "F1": [
-    "/produtos/f1/1.webp",
-    "/produtos/f1/2.webp"
-  ],
-  "Polo Ralph Lauren": [
-    "/produtos/polo-ralph-lauren/1.webp",
-    "/produtos/polo-ralph-lauren/2.webp",
-    "/produtos/polo-ralph-lauren/3.webp",
-    "/produtos/polo-ralph-lauren/4.webp",
-    "/produtos/polo-ralph-lauren/5.webp",
-    "/produtos/polo-ralph-lauren/6.webp",
-    "/produtos/polo-ralph-lauren/7.webp",
-    "/produtos/polo-ralph-lauren/8.webp"
-  ],
-  "Casa Blanca ": [],
-  "Bonés ": [
-    "/produtos/bones/1.webp",
-    "/produtos/bones/2.webp",
-    "/produtos/bones/3.webp",
-    "/produtos/bones/4.webp",
-    "/produtos/bones/5.webp",
-    "/produtos/bones/6.webp",
-    "/produtos/bones/7.webp",
-    "/produtos/bones/8.webp",
-    "/produtos/bones/9.webp",
-    "/produtos/bones/10.webp",
-    "/produtos/bones/11.webp",
-    "/produtos/bones/12.webp",
-    "/produtos/bones/13.webp",
-    "/produtos/bones/14.webp",
-    "/produtos/bones/15.webp",
-    "/produtos/bones/16.webp",
-    "/produtos/bones/17.webp",
-    "/produtos/bones/18.webp",
-    "/produtos/bones/19.webp",
-    "/produtos/bones/20.webp",
-    "/produtos/bones/21.webp",
-    "/produtos/bones/22.webp",
-    "/produtos/bones/23.webp",
-    "/produtos/bones/24.webp",
-    "/produtos/bones/25.webp",
-    "/produtos/bones/26.webp",
-    "/produtos/bones/27.webp",
-    "/produtos/bones/28.webp",
-    "/produtos/bones/29.webp"
-  ],
-  "Off White ": [
-    "/produtos/off-white/1.webp",
-    "/produtos/off-white/2.webp",
-    "/produtos/off-white/3.webp",
-    "/produtos/off-white/4.webp",
-    "/produtos/off-white/5.webp"
-  ],
+  "F1": ["/produtos/f1/1.webp","/produtos/f1/2.webp"],
+  "Polo Ralph Lauren": ["/produtos/polo-ralph-lauren/1.webp","/produtos/polo-ralph-lauren/2.webp","/produtos/polo-ralph-lauren/3.webp","/produtos/polo-ralph-lauren/4.webp","/produtos/polo-ralph-lauren/5.webp","/produtos/polo-ralph-lauren/6.webp","/produtos/polo-ralph-lauren/7.webp","/produtos/polo-ralph-lauren/8.webp"],
+  "Casa Blanca": [],
+  "Bonés": ["/produtos/bones/1.webp","/produtos/bones/2.webp","/produtos/bones/3.webp","/produtos/bones/4.webp","/produtos/bones/5.webp","/produtos/bones/6.webp","/produtos/bones/7.webp","/produtos/bones/8.webp","/produtos/bones/9.webp","/produtos/bones/10.webp","/produtos/bones/11.webp","/produtos/bones/12.webp","/produtos/bones/13.webp","/produtos/bones/14.webp","/produtos/bones/15.webp","/produtos/bones/16.webp","/produtos/bones/17.webp","/produtos/bones/18.webp","/produtos/bones/19.webp","/produtos/bones/20.webp","/produtos/bones/21.webp","/produtos/bones/22.webp","/produtos/bones/23.webp","/produtos/bones/24.webp","/produtos/bones/25.webp","/produtos/bones/26.webp","/produtos/bones/27.webp","/produtos/bones/28.webp","/produtos/bones/29.webp"],
+  "Off White": ["/produtos/off-white/1.webp","/produtos/off-white/2.webp","/produtos/off-white/3.webp","/produtos/off-white/4.webp"],
   "Amiri": []
 }

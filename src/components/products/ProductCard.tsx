@@ -2,10 +2,14 @@ import { Link } from "@tanstack/react-router";
 import { ProductImage } from "./ProductImage";
 import { ProductBadge } from "./ProductBadge";
 import { formatPrice } from "@/lib/format";
-import type { Product } from "@/data/products";
+import { CATEGORY_LABELS, type Product } from "@/data/products";
 
 export function ProductCard({ product, priority }: { product: Product; priority?: boolean }) {
   const hoverImage = product.images[1];
+  const categoryTag = CATEGORY_LABELS[product.category] ?? product.category.toUpperCase();
+  // Em categorias tipo-genérico (Bonés, Tênis...) a "marca" é o próprio tipo — evita repetir a mesma
+  // palavra na tag e na linha de marca (ex: tag "TÊNIS" + marca "Tênis").
+  const showBrandLine = categoryTag.toLowerCase() !== product.brand.toLowerCase();
 
   return (
     <Link
@@ -39,7 +43,10 @@ export function ProductCard({ product, priority }: { product: Product; priority?
       </div>
 
       <div className="space-y-1.5 border-t border-border p-3 sm:p-4">
-        <p className="label-xs truncate text-muted-foreground">{product.brand}</p>
+        <p className="label-xs truncate text-muted-foreground/70">{categoryTag}</p>
+        {showBrandLine ? (
+          <p className="label-xs truncate text-muted-foreground">{product.brand}</p>
+        ) : null}
         <h3 className="truncate text-sm font-normal">{product.name}</h3>
         <p className="text-sm text-muted-foreground">
           {product.price === null ? (

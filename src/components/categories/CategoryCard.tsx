@@ -21,7 +21,7 @@ export function CategoryCard({ category }: { category: Category }) {
           <div
             className="flex size-full items-center justify-center"
             role="img"
-            aria-label={`Imagem pendente — ${category.name}`}
+            aria-label={`Imagem pendente: ${category.name}`}
           >
             <span className="label-xs text-muted-foreground/70">Imagem pendente</span>
           </div>

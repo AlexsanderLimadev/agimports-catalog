@@ -4,11 +4,11 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ArrowIcon } from "@/components/ui/ActionLink";
 import { ProductImage } from "@/components/products/ProductImage";
 import { formatPrice } from "@/lib/format";
-import { getFeaturedProducts } from "@/data/products";
+import { getFeaturedProducts, visibleProducts } from "@/data/products";
 
-/** Produto de destaque em composição editorial de campanha. */
+/** Produto de destaque em composição editorial de campanha. Sempre com foto real. */
 export function FeaturedEditorial() {
-  const product = getFeaturedProducts()[0];
+  const product = getFeaturedProducts()[0] ?? visibleProducts[0];
   if (!product) return null;
 
   return (

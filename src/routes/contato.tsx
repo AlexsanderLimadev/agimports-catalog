@@ -47,7 +47,7 @@ function ContactPage() {
           <Instagram aria-hidden="true" className="size-5 text-muted-foreground" />
           <h2 className="label-xs mt-6">Instagram</h2>
           <p className="mt-3 text-sm text-muted-foreground">
-            {INSTAGRAM_HANDLE} — novidades e lançamentos.
+            {INSTAGRAM_HANDLE}: novidades e lançamentos.
           </p>
           <ActionAnchor href={INSTAGRAM_URL} className="mt-8 w-full">
             Ver Instagram

@@ -5,7 +5,7 @@ import { Search } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ChipRow } from "@/components/products/ProductFilters";
 import { ProductGrid } from "@/components/products/ProductGrid";
-import { products as allProducts, getBrands } from "@/data/products";
+import { visibleProducts as allProducts, getBrands } from "@/data/products";
 import { categories } from "@/data/categories";
 import { STORE_NAME } from "@/lib/constants";
 
@@ -84,7 +84,13 @@ function CatalogPage() {
 
   const clear = () =>
     navigate({
-      search: { categoria: "todos", marca: "todas", filtro: "todos", ordem: "destaques", busca: "" },
+      search: {
+        categoria: "todos",
+        marca: "todas",
+        filtro: "todos",
+        ordem: "destaques",
+        busca: "",
+      },
     });
 
   return (

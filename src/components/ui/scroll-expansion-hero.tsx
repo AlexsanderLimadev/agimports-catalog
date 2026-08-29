@@ -63,12 +63,7 @@ export function ScrollExpandMedia({
       <div ref={wrapperRef} className="relative h-[220svh]">
         <div className="sticky top-0 flex h-[100svh] items-center justify-center overflow-hidden">
           <motion.div className="absolute inset-0 z-0" style={{ opacity: bgOpacity }}>
-            <img
-              src={bgImageSrc}
-              alt=""
-              aria-hidden="true"
-              className="size-full object-cover"
-            />
+            <img src={bgImageSrc} alt="" aria-hidden="true" className="size-full object-cover" />
             <div className="absolute inset-0 bg-background/72" />
           </motion.div>
 

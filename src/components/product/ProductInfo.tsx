@@ -17,9 +17,7 @@ export function ProductInfo({
 
       <p className="mt-6 text-2xl font-light">
         {product.price === null ? (
-          <span className="label-xs align-middle text-muted-foreground">
-            Preço sob consulta
-          </span>
+          <span className="label-xs align-middle text-muted-foreground">Preço sob consulta</span>
         ) : (
           formatPrice(product.price)
         )}

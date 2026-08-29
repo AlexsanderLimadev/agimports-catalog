@@ -5,8 +5,7 @@
 
 export const STORE_NAME = "AG Imports";
 export const STORE_TAGLINE = "Importados selecionados para quem valoriza o extraordinário.";
-export const STORE_DESCRIPTION =
-  "Explore a seleção de produtos importados da AG Imports.";
+export const STORE_DESCRIPTION = "Explore a seleção de produtos importados da AG Imports.";
 
 /** Somente dígitos, com código do país. Ex.: 5511999999999 */
 export const WHATSAPP_NUMBER = "5500000000000";

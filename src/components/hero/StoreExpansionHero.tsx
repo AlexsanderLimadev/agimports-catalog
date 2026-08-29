@@ -21,12 +21,11 @@ export function StoreExpansionHero() {
       <div className="mx-auto max-w-3xl text-center">
         <p className="label-xs text-muted-foreground">A curadoria</p>
         <h2 className="text-editorial mt-5 text-2xl leading-snug sm:text-3xl">
-          Peças e fragrâncias importadas escolhidas uma a uma — para quem valoriza o
-          extraordinário.
+          Peças e fragrâncias importadas escolhidas uma a uma, para quem valoriza o extraordinário.
         </h2>
         <p className="mt-6 text-sm leading-relaxed text-muted-foreground">
-          Cada item do catálogo passa por seleção própria: origem, autenticidade e acabamento.
-          Sem estoque genérico, sem pressa — apenas o que vale a pena vestir e usar.
+          Cada item do catálogo passa por seleção própria: origem, autenticidade e acabamento. Sem
+          estoque genérico, sem pressa: apenas o que vale a pena vestir e usar.
         </p>
         <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
           O atendimento é direto pelo WhatsApp: você fala com quem escolhe os produtos, confere

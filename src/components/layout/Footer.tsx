@@ -9,11 +9,7 @@ export function Footer() {
     <footer className="mt-24 border-t border-border">
       <Container className="grid gap-12 py-16 md:grid-cols-[minmax(0,1fr)_auto]">
         <div className="min-w-0">
-          <img
-            src={logoAsset.url}
-            alt="AG Imports"
-            className="h-12 w-auto brightness-0 invert"
-          />
+          <img src={logoAsset.url} alt="AG Imports" className="h-12 w-auto brightness-0 invert" />
           <p className="mt-4 max-w-xs text-sm text-muted-foreground">
             Produtos selecionados.
             <br />

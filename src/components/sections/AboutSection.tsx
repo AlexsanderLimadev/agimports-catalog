@@ -8,8 +8,8 @@ export function AboutSection() {
         <h2 className="text-editorial text-3xl sm:text-4xl">Mais que importados.</h2>
         <div>
           <p className="text-base leading-relaxed text-muted-foreground">
-            A AG Imports seleciona produtos importados para quem busca qualidade,
-            autenticidade e uma experiência diferenciada.
+            A AG Imports seleciona produtos importados para quem busca qualidade, autenticidade e
+            uma experiência diferenciada.
           </p>
           <div className="mt-8">
             <ActionLink to="/sobre" variant="secondary">

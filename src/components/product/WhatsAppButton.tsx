@@ -3,13 +3,7 @@ import { getProductWhatsAppUrl } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
 import type { Product } from "@/data/products";
 
-export function WhatsAppButton({
-  product,
-  className,
-}: {
-  product: Product;
-  className?: string;
-}) {
+export function WhatsAppButton({ product, className }: { product: Product; className?: string }) {
   return (
     <a
       href={getProductWhatsAppUrl(product)}

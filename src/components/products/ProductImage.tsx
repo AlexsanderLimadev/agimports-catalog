@@ -20,12 +20,9 @@ export function ProductImage({
   if (!source || broken) {
     return (
       <div
-        className={cn(
-          "flex aspect-[3/4] w-full items-center justify-center bg-surface",
-          className,
-        )}
+        className={cn("flex aspect-[3/4] w-full items-center justify-center bg-surface", className)}
         role="img"
-        aria-label={`Imagem pendente — ${alt}`}
+        aria-label={`Imagem pendente: ${alt}`}
       >
         <span className="label-xs text-muted-foreground/70">Imagem pendente</span>
       </div>

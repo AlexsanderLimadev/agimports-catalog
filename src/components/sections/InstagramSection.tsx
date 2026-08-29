@@ -27,7 +27,7 @@ export function InstagramSection() {
             <div
               key={i}
               role="img"
-              aria-label="Publicação do Instagram — imagem pendente"
+              aria-label="Publicação do Instagram: imagem pendente"
               className="flex aspect-square items-center justify-center rounded-xl border border-border bg-surface"
             >
               <span className="label-xs text-muted-foreground/70">Pendente</span>

@@ -26,9 +26,7 @@ function AboutPage() {
     <Container className="py-16 md:py-24">
       <header className="border-b border-border pb-8">
         <p className="label-xs text-muted-foreground">Sobre</p>
-        <h1 className="text-editorial mt-4 max-w-2xl text-4xl sm:text-5xl">
-          Mais que importados.
-        </h1>
+        <h1 className="text-editorial mt-4 max-w-2xl text-4xl sm:text-5xl">Mais que importados.</h1>
       </header>
 
       <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-20">

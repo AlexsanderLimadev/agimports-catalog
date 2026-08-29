@@ -16,11 +16,16 @@ export const Route = createFileRoute("/produto/$slug")({
   head: ({ loaderData, params }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: `Produto não encontrado | ${STORE_NAME}` }, { name: "robots", content: "noindex" }],
+        meta: [
+          { title: `Produto não encontrado | ${STORE_NAME}` },
+          { name: "robots", content: "noindex" },
+        ],
       };
     }
     const { product } = loaderData;
-    const description = product.description ?? `${product.name} — ${product.brand}. Fale com a AG Imports pelo WhatsApp.`;
+    const description =
+      product.description ??
+      `${product.name}, ${product.brand}. Fale com a AG Imports pelo WhatsApp.`;
     return {
       meta: [
         { title: `${product.name} | ${STORE_NAME}` },
@@ -42,9 +47,7 @@ function ProductNotFound() {
     <Container className="flex min-h-[70vh] flex-col items-center justify-center text-center">
       <p className="label-xs text-muted-foreground">Produto</p>
       <h1 className="text-editorial mt-4 text-4xl">Produto não encontrado</h1>
-      <p className="mt-3 text-sm text-muted-foreground">
-        Este produto pode ter saído do catálogo.
-      </p>
+      <p className="mt-3 text-sm text-muted-foreground">Este produto pode ter saído do catálogo.</p>
       <Link
         to="/catalogo"
         className="label-xs mt-8 rounded-xl bg-primary px-6 py-3 text-primary-foreground"
