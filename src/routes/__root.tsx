@@ -13,6 +13,7 @@ import appCss from "../styles.css?url";
 import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
+import { FirstPurchaseDiscount } from "@/components/marketing/FirstPurchaseDiscount";
 
 function NotFoundComponent() {
   return (
@@ -133,6 +134,7 @@ function RootComponent() {
         </main>
         <Footer />
         <FloatingWhatsApp />
+        <FirstPurchaseDiscount />
       </div>
     </QueryClientProvider>
   );

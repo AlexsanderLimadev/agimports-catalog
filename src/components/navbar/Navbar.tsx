@@ -6,20 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { INSTAGRAM_URL, NAV_LINKS, STORE_NAME } from "@/lib/constants";
 import { GENERAL_WHATSAPP_URL } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
-
-/**
- * TODO: coloque o arquivo real da logo (PNG/SVG, arte preta sobre fundo
- * transparente) em src/assets/ag-imports-logo.png e troque a linha abaixo por:
- *   import logo from "@/assets/ag-imports-logo.png";
- * O antigo `ag-imports-logo.png.asset.json` era só um ponteiro pra Lovable
- * (/__l5e/assets-v1/...) — nunca teve o binário real no repo, por isso a
- * imagem não carregava. Não é a classe `brightness-0 invert` que quebra a
- * logo: o fundo do site é quase preto (#0A0A0A), então esse filtro é o que
- * faz uma logo preta virar branca e ficar visível aqui — se você tirar o
- * filtro sem trocar a arte por uma já branca, a logo fica preta sobre fundo
- * preto (invisível). Mantido até você confirmar a arte final.
- */
-const logo: string | null = null;
+import logo from "@/assets/ag-imports-logo.png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -52,12 +39,7 @@ export function Navbar() {
           className="flex shrink-0 items-center gap-2"
           aria-label={`Início: ${STORE_NAME}`}
         >
-          {logo ? (
-            <img src={logo} alt={STORE_NAME} className="h-9 w-auto brightness-0 invert" />
-          ) : (
-            <span className="text-editorial text-lg tracking-wide">{STORE_NAME}</span>
-          )}
-        </Link>
+          <img src={logo} alt={STORE_NAME} className="h-9 w-auto brightness-0 invert" />        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (

@@ -21,3 +21,9 @@ export const NAV_LINKS = [
   { label: "Sobre", to: "/sobre" },
   { label: "Contato", to: "/contato" },
 ] as const;
+
+/** Popup de primeira compra — altere só aqui pra mudar o percentual/código. */
+export const FIRST_PURCHASE_DISCOUNT_PERCENT = 5;
+export const FIRST_PURCHASE_DISCOUNT_CODE = "AGIMPORTS5";
+/** Chave usada no localStorage do navegador pra não repetir o popup pra quem já viu. */
+export const FIRST_PURCHASE_DISCOUNT_STORAGE_KEY = "ag-imports:discount-popup-seen";

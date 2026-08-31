@@ -1,4 +1,4 @@
-import { WHATSAPP_NUMBER } from "./constants";
+import { FIRST_PURCHASE_DISCOUNT_CODE, FIRST_PURCHASE_DISCOUNT_PERCENT, WHATSAPP_NUMBER } from "./constants";
 import type { Product } from "@/data/products";
 
 export function getWhatsAppUrl(message: string) {
@@ -18,4 +18,8 @@ export function generateWhatsAppLink(product: Product) {
 
 export const GENERAL_WHATSAPP_URL = getWhatsAppUrl(
   "Olá! Vim pelo site da AG Imports e gostaria de mais informações.",
+);
+
+export const DISCOUNT_WHATSAPP_URL = getWhatsAppUrl(
+  `Olá! Ganhei ${FIRST_PURCHASE_DISCOUNT_PERCENT}% de desconto no site da AG Imports (código ${FIRST_PURCHASE_DISCOUNT_CODE}) e quero usar no meu primeiro pedido.`,
 );
