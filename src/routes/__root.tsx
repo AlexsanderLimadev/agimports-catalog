@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "AG Imports | Importados Premium" },
+      { title: "AG Imports" },
       {
         name: "description",
         content: "Catálogo premium de produtos importados selecionados pela AG Imports.",

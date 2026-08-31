@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container";
 import { INSTAGRAM_URL, NAV_LINKS, STORE_NAME } from "@/lib/constants";
 import { GENERAL_WHATSAPP_URL } from "@/lib/whatsapp";
 import { cn } from "@/lib/utils";
-import logo from "@/assets/ag-imports-logo.png";
+import mark from "@/assets/ag-imports-mark.png";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,7 +39,9 @@ export function Navbar() {
           className="flex shrink-0 items-center gap-2"
           aria-label={`Início: ${STORE_NAME}`}
         >
-          <img src={logo} alt={STORE_NAME} className="h-9 w-auto brightness-0 invert" />        </Link>
+          <img src={mark} alt="" aria-hidden className="h-8 w-auto brightness-0 invert" />
+          <span className="text-editorial text-lg leading-none tracking-wide">{STORE_NAME}</span>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) => (

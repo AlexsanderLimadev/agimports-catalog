@@ -13,7 +13,7 @@ import { InstagramSection } from "@/components/sections/InstagramSection";
 import { CtaSection } from "@/components/sections/CtaSection";
 import { STORE_NAME } from "@/lib/constants";
 
-const title = "AG Imports | Catálogo de Importados Premium";
+const title = STORE_NAME;
 const description =
   "Catálogo premium da AG Imports: produtos importados selecionados. Fale direto com a loja pelo WhatsApp.";
 
