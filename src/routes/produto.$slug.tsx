@@ -5,7 +5,7 @@ import { ProductInfo } from "@/components/product/ProductInfo";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { getProductBySlug } from "@/data/products";
 import { getCategoryBySlug } from "@/data/categories";
-import { STORE_NAME } from "@/lib/constants";
+import { SITE_URL, STORE_NAME } from "@/lib/constants";
 
 export const Route = createFileRoute("/produto/$slug")({
   loader: ({ params }) => {
@@ -26,6 +26,29 @@ export const Route = createFileRoute("/produto/$slug")({
     const description =
       product.description ??
       `${product.name}, ${product.brand}. Fale com a AG Imports pelo WhatsApp.`;
+    const productUrl = `${SITE_URL}/produto/${params.slug}`;
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      description,
+      brand: { "@type": "Brand", name: product.brand },
+      url: productUrl,
+      ...(product.images[0] ? { image: `${SITE_URL}${product.images[0]}` } : {}),
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "BRL",
+        ...(product.price !== null
+          ? { price: product.price.toFixed(2) }
+          : { price: "0", description: "Preço sob consulta" }),
+        availability: product.available
+          ? "https://schema.org/InStock"
+          : "https://schema.org/OutOfStock",
+        seller: { "@type": "Organization", name: STORE_NAME },
+      },
+    };
+
     return {
       meta: [
         { title: `${product.name} | ${STORE_NAME}` },
@@ -33,9 +56,18 @@ export const Route = createFileRoute("/produto/$slug")({
         { property: "og:title", content: `${product.name} | ${STORE_NAME}` },
         { property: "og:description", content: description },
         { property: "og:type", content: "product" },
-        { property: "og:url", content: `/produto/${params.slug}` },
+        { property: "og:url", content: productUrl },
+        ...(product.images[0]
+          ? [{ property: "og:image", content: `${SITE_URL}${product.images[0]}` }]
+          : []),
       ],
-      links: [{ rel: "canonical", href: `/produto/${params.slug}` }],
+      links: [{ rel: "canonical", href: productUrl }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify(jsonLd),
+        },
+      ],
     };
   },
   notFoundComponent: ProductNotFound,

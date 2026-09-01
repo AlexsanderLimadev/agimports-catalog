@@ -49,8 +49,19 @@ export function Footer() {
         </nav>
       </Container>
 
-      <Container className="border-t border-border py-6">
+      <Container className="flex flex-col-reverse justify-between gap-4 border-t border-border py-6 sm:flex-row sm:items-center">
         <p className="label-xs text-muted-foreground">© 2026 {STORE_NAME}</p>
+        <div className="flex flex-wrap gap-4 sm:gap-6">
+          <Link to="/termos-de-uso" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+            Termos de Uso
+          </Link>
+          <Link to="/politica-de-privacidade" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+            Privacidade
+          </Link>
+          <Link to="/politica-de-cookies" className="text-xs text-muted-foreground transition-colors hover:text-foreground">
+            Cookies
+          </Link>
+        </div>
       </Container>
     </footer>
   );

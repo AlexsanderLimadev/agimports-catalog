@@ -14,6 +14,7 @@ import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 import { FirstPurchaseDiscount } from "@/components/marketing/FirstPurchaseDiscount";
+import { SITE_URL } from "@/lib/constants";
 
 function NotFoundComponent() {
   return (
@@ -84,6 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:site_name", content: "AG Imports" },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE_URL || "/" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -109,7 +111,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <head>
         <HeadContent />
       </head>
@@ -120,6 +122,9 @@ function RootShell({ children }: { children: ReactNode }) {
     </html>
   );
 }
+
+import { CookieBanner } from "@/components/layout/CookieBanner";
+import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics";
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
@@ -135,6 +140,8 @@ function RootComponent() {
         <Footer />
         <FloatingWhatsApp />
         <FirstPurchaseDiscount />
+        <CookieBanner />
+        <GoogleAnalytics />
       </div>
     </QueryClientProvider>
   );
