@@ -12,47 +12,58 @@ export function FeaturedEditorial() {
   if (!product) return null;
 
   return (
-    <section className="border-y border-border bg-background-2 py-20 md:py-32">
-      <Container className="grid items-center gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+    <section className="border-y border-white/[0.06] bg-[#020202] py-24 md:py-36">
+      <Container className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-24">
         <Reveal className="min-w-0">
           <Link
             to="/produto/$slug"
             params={{ slug: product.slug }}
-            className="group block overflow-hidden rounded-xl border border-border bg-surface"
+            className="group block overflow-hidden bg-[#09090b]"
           >
             <ProductImage
               product={product}
-              className="aspect-[4/5] p-10 transition-transform duration-700 ease-out group-hover:scale-[1.03] md:aspect-[5/4] md:p-16"
+              priority
+              className="aspect-[3/4] w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
             />
           </Link>
         </Reveal>
 
-        <Reveal delay={0.1} className="min-w-0">
-          <p className="label-xs text-muted-foreground">Destaque</p>
-          <p className="label-xs mt-8">{product.brand}</p>
-          <h2 className="text-editorial mt-4 text-3xl leading-tight sm:text-4xl lg:text-5xl">
-            {product.name}
-          </h2>
-          <p className="mt-6 text-lg font-light">
+        <Reveal delay={0.1} className="min-w-0 space-y-6">
+          <p className="text-[10px] font-medium uppercase tracking-[0.25em] text-zinc-500">
+            Peça em Destaque
+          </p>
+
+          <div>
+            <p className="text-xs uppercase tracking-[0.2em] text-zinc-400">{product.brand}</p>
+            <h2 className="text-editorial mt-3 text-3xl leading-tight sm:text-4xl lg:text-5xl text-zinc-100">
+              {product.name}
+            </h2>
+          </div>
+
+          <p className="text-lg font-light text-zinc-300">
             {product.price === null ? (
-              <span className="label-xs text-muted-foreground">Preço sob consulta</span>
+              <span className="text-xs uppercase tracking-[0.15em] text-zinc-500">Sob consulta</span>
             ) : (
               formatPrice(product.price)
             )}
           </p>
+
           {product.description ? (
-            <p className="mt-6 max-w-prose text-sm leading-relaxed text-muted-foreground">
+            <p className="max-w-prose text-sm font-light leading-relaxed text-zinc-400">
               {product.description}
             </p>
           ) : null}
-          <Link
-            to="/produto/$slug"
-            params={{ slug: product.slug }}
-            className="label-xs group mt-10 inline-flex items-center gap-2"
-          >
-            Ver produto
-            <ArrowIcon />
-          </Link>
+
+          <div className="pt-4">
+            <Link
+              to="/produto/$slug"
+              params={{ slug: product.slug }}
+              className="inline-flex items-center gap-3 border-b border-white/40 pb-1 text-xs uppercase tracking-[0.2em] text-zinc-200 transition-colors hover:border-white hover:text-white"
+            >
+              Explorar peça
+              <ArrowIcon />
+            </Link>
+          </div>
         </Reveal>
       </Container>
     </section>

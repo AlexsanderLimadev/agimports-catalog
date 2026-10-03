@@ -36,18 +36,18 @@ export const CATEGORY_LABELS: Record<string, string> = {
   "oculos-blue-blocker": "ÓCULOS",
   birkenstocks: "SANDÁLIAS",
   vilebrequin: "MODA PRAIA",
-  amiri: "AMIRI",
-  "off-white": "OFF WHITE",
-  "casa-blanca": "CASA BLANCA",
-  f1: "F1",
-  "polo-ralph-lauren": "POLO RALPH LAUREN",
+  amiri: "CAMISETAS",
+  "off-white": "CAMISETAS",
+  "casa-blanca": "CAMISARIA",
+  f1: "CAMISETAS",
+  "polo-ralph-lauren": "POLOS",
   feminino: "FEMININO",
 };
 
 /** Um path do Lovable (/__l5e/...) nunca resolve fora da infra deles — é o sinal de "sem foto real". */
 export function hasValidImage(product: Pick<Product, "images">) {
-  const first = product.images[0];
-  return Boolean(first) && !first!.startsWith("/__l5e/");
+  const first = product.images?.[0];
+  return Boolean(first) && !first.startsWith("/__l5e/");
 }
 
 export const products: Product[] = [
@@ -2673,13 +2673,11 @@ export function getFavoritesOneByBrand(limit = 8) {
 }
 
 /**
- * "Recém-chegados": os N mais recentes com foto real. Não existe timestamp
- * de cadastro nos dados — usa o `id` numérico (sequencial, maior = mais
- * recente) como proxy, é o único sinal de ordem de cadastro disponível.
+ * "Recém-chegados": os 4 últimos produtos cadastrados que possuem foto válida.
+ * Ordena decrescente pelo id cadastrado para garantir que são os mais recentes.
  */
 export function getNewProducts(limit = 4) {
   return [...visibleProducts]
-    .filter((p) => p.isNew)
     .sort((a, b) => Number(b.id) - Number(a.id))
     .slice(0, limit);
 }

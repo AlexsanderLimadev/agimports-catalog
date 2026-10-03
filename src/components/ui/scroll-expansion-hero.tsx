@@ -68,12 +68,11 @@ export function ScrollExpandMedia({
           </motion.div>
 
           <motion.div
-            className="absolute z-[1] overflow-hidden border border-border shadow-2xl"
+            className="absolute z-[1] overflow-hidden border border-white/[0.08]"
             style={{
               width: mediaWidth,
               height: mediaHeight,
               borderRadius: mediaRadius,
-              boxShadow: "0 0 60px rgba(0,0,0,0.45)",
             }}
           >
             {mediaType === "video" ? (

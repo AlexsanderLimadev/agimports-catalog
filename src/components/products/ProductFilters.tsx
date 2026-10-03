@@ -15,8 +15,8 @@ export function ChipRow({
 }) {
   return (
     <div className="space-y-3">
-      <p className="label-xs text-muted-foreground">{label}</p>
-      <div className="-mx-5 flex gap-2 overflow-x-auto px-5 pb-1 md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
+      <p className="label-xs text-muted-foreground/50">{label}</p>
+      <div className="-mx-5 flex gap-5 overflow-x-auto px-5 pb-1 md:mx-0 md:flex-wrap md:overflow-visible md:px-0">
         {chips.map((chip) => {
           const active = chip.value === value;
           return (
@@ -26,10 +26,10 @@ export function ChipRow({
               onClick={() => onChange(chip.value)}
               aria-pressed={active}
               className={cn(
-                "label-xs shrink-0 rounded-full border px-4 py-2 transition-colors duration-200",
+                "label-xs shrink-0 pb-0.5 transition-colors duration-200",
                 active
-                  ? "border-foreground bg-foreground text-background"
-                  : "border-border text-muted-foreground hover:border-foreground/40 hover:text-foreground",
+                  ? "border-b border-foreground/60 text-foreground"
+                  : "text-muted-foreground/60 hover:text-muted-foreground",
               )}
             >
               {chip.label}

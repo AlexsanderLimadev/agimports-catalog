@@ -8,9 +8,11 @@ export function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Falar no WhatsApp"
-      className="fixed bottom-5 right-5 z-30 flex size-12 items-center justify-center rounded-full border border-border bg-background/85 text-foreground backdrop-blur-md transition-all duration-300 hover:border-foreground/50 active:scale-95 md:hidden"
+      className="fixed bottom-6 right-6 z-30 flex h-11 items-center gap-2.5 border border-white/10 bg-black/80 px-4 text-zinc-300 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:text-white active:scale-95 md:hidden"
     >
-      <MessageCircle aria-hidden="true" className="size-5" />
+      <MessageCircle aria-hidden="true" className="size-3.5 shrink-0" strokeWidth={1.5} />
+      <span className="text-[10px] uppercase font-medium tracking-[0.2em]">WhatsApp</span>
     </a>
   );
 }
+

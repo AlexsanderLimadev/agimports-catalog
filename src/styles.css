@@ -4,18 +4,19 @@
 
 /*
  * AG IMPORTS — design system
- * Monochrome premium dark. Inter for UI, Cormorant Garamond for editorial titles.
+ * Black premium. Inter for UI, Cormorant Garamond for editorial titles.
+ * Padrão: Farfetch / Saint Laurent / Jacquemus
  */
 
 @theme inline {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
 
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: 2px;
+  --radius-md: 3px;
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
-  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-xl: calc(var(--radius) + 2px);
+  --radius-2xl: calc(var(--radius) + 4px);
 
   --color-background: var(--background);
   --color-background-2: var(--background-2);
@@ -50,25 +51,25 @@
   --color-sidebar-primary-foreground: var(--primary-foreground);
   --color-sidebar-ring: var(--ring);
 
-  --tracking-editorial: 0.18em;
+  --tracking-editorial: 0.10em;
 }
 
 :root {
-  --radius: 0.75rem;
-  --background: oklch(0.145 0 0); /* #0A0A0A */
-  --background-2: oklch(0.176 0 0); /* #111111 */
-  --surface: oklch(0.205 0 0); /* #151515 */
-  --surface-2: oklch(0.235 0 0);
-  --foreground: oklch(0.968 0 0); /* #F5F5F5 */
-  --muted-foreground: oklch(0.708 0 0); /* #A1A1A1 */
-  --border: oklch(0.276 0 0); /* #242424 */
-  --primary: oklch(1 0 0);
-  --primary-foreground: oklch(0.145 0 0);
-  --accent: oklch(0.235 0 0);
-  --accent-foreground: oklch(0.968 0 0);
-  --champagne: oklch(0.9 0.028 90);
-  --destructive: oklch(0.577 0.18 27);
-  --ring: oklch(0.55 0 0);
+  --radius: 0px;
+  --background: #000000;             /* Preto absoluto */
+  --background-2: #050505;           /* Preto secundário sutil */
+  --surface: #0a0a0c;                /* Superfície ultra neutra */
+  --surface-2: #121214;              /* Superfície secundária */
+  --foreground: #f4f4f5;             /* Branco refinado (zinc-100) */
+  --muted-foreground: #71717a;       /* Cinza neutro elegante (zinc-500) */
+  --border: rgba(39, 39, 42, 0.4);   /* Divisor ultra-discreto (border-zinc-800/40) */
+  --primary: #f4f4f5;
+  --primary-foreground: #000000;
+  --accent: #121214;
+  --accent-foreground: #f4f4f5;
+  --champagne: #e4d5b7;
+  --destructive: #7f1d1d;
+  --ring: rgba(244, 244, 245, 0.2);
 }
 
 .dark {
@@ -83,12 +84,14 @@
   html {
     color-scheme: dark;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-sans);
+    font-feature-settings: "kern" 1, "liga" 1;
   }
 
   ::selection {
@@ -97,7 +100,7 @@
   }
 
   :focus-visible {
-    outline: 1px solid var(--color-foreground);
+    outline: 1px solid var(--color-ring);
     outline-offset: 2px;
   }
 }
@@ -105,14 +108,16 @@
 @utility text-editorial {
   font-family: var(--font-serif);
   font-weight: 300;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 @utility label-xs {
-  font-size: 0.6875rem;
+  font-size: 0.60rem;
   line-height: 1;
   letter-spacing: var(--tracking-editorial);
   text-transform: uppercase;
+  font-weight: 400;
 }
 
 @utility link-underline {

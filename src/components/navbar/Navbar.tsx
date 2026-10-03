@@ -13,7 +13,7 @@ export function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -29,46 +29,51 @@ export function Navbar() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-40 transition-colors duration-300",
-        scrolled ? "border-b border-border bg-background/80 backdrop-blur-md" : "bg-transparent",
+        "sticky top-0 z-40 transition-all duration-300",
+        scrolled
+          ? "border-b border-white/[0.06] bg-black/80 backdrop-blur-md"
+          : "bg-black/40 backdrop-blur-sm",
       )}
     >
-      <Container className="flex h-16 items-center justify-between gap-4">
+      <Container className="flex h-16 items-center justify-between gap-6">
         <Link
           to="/"
-          className="flex shrink-0 items-center gap-2"
+          className="flex shrink-0 items-center gap-3 transition-opacity duration-200 hover:opacity-85"
           aria-label={`Início: ${STORE_NAME}`}
         >
-          <img src={mark} alt="" aria-hidden className="h-8 w-auto brightness-0 invert" />
-          <span className="text-editorial text-lg leading-none tracking-wide">{STORE_NAME}</span>
+          <img src={mark} alt={STORE_NAME} className="h-7 w-auto brightness-0 invert" />
+          <span className="text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-100">{STORE_NAME}</span>
         </Link>
 
-        <nav className="hidden items-center gap-8 md:flex">
+        <nav className="hidden items-center gap-7 md:flex">
           {NAV_LINKS.map((link) => (
             <Link
               key={link.to}
               to={link.to}
-              className="link-underline label-xs text-muted-foreground transition-colors hover:text-foreground data-[status=active]:text-foreground"
+              className="link-underline label-xs text-muted-foreground transition-colors duration-300 hover:text-foreground data-[status=active]:text-foreground"
             >
               {link.label}
             </Link>
           ))}
+
           <a
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram da AG Imports"
-            className="text-muted-foreground transition-colors hover:text-foreground"
+            className="text-muted-foreground transition-colors duration-300 hover:text-foreground"
           >
-            <Instagram aria-hidden="true" className="size-4" />
+            <Instagram aria-hidden="true" className="size-[15px]" strokeWidth={1.5} />
           </a>
+
           <a
             href={GENERAL_WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="label-xs flex items-center gap-2 rounded-xl border border-border px-4 py-2 transition-colors hover:border-foreground/50"
+            className="label-xs flex items-center gap-1.5 border-b border-border pb-px text-muted-foreground transition-colors duration-300 hover:border-foreground/40 hover:text-foreground"
           >
-            <MessageCircle aria-hidden="true" className="size-3.5" /> WhatsApp
+            <MessageCircle aria-hidden="true" className="size-3" strokeWidth={1.5} />
+            WhatsApp
           </a>
         </nav>
 
@@ -78,9 +83,9 @@ export function Navbar() {
           aria-label="Abrir menu"
           aria-expanded={open}
           aria-controls="menu-mobile"
-          className="rounded-xl p-2 text-foreground md:hidden"
+          className="p-1.5 text-muted-foreground transition-colors hover:text-foreground md:hidden"
         >
-          <Menu aria-hidden="true" className="size-5" />
+          <Menu aria-hidden="true" className="size-[18px]" strokeWidth={1.5} />
         </button>
       </Container>
 

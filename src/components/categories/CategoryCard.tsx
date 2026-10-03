@@ -2,35 +2,33 @@ import { Link } from "@tanstack/react-router";
 import type { Category } from "@/data/categories";
 
 export function CategoryCard({ category }: { category: Category }) {
+  if (!category.image) return null;
+
   return (
     <Link
       to="/catalogo"
       search={{ categoria: category.slug }}
-      className="group relative flex flex-col justify-end overflow-hidden rounded-xl border border-border bg-background-2 transition-colors duration-300 hover:border-foreground/25"
+      className="group block w-full"
     >
-      <div className="relative aspect-[4/5] w-full overflow-hidden bg-surface">
-        {category.image ? (
-          <img
-            src={category.image}
-            alt={category.name}
-            loading="lazy"
-            decoding="async"
-            className="size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-          />
-        ) : (
-          <div
-            className="flex size-full items-center justify-center"
-            role="img"
-            aria-label={`Imagem pendente: ${category.name}`}
-          >
-            <span className="label-xs text-muted-foreground/70">Imagem pendente</span>
-          </div>
-        )}
+      <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#09090b]">
+        <img
+          src={category.image}
+          alt={category.name}
+          loading="lazy"
+          decoding="async"
+          className="size-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
+        />
       </div>
-      <div className="border-t border-border p-4">
-        <h3 className="text-sm">{category.name}</h3>
-        <p className="mt-1 truncate text-xs text-muted-foreground">{category.description}</p>
+
+      <div className="mt-3.5 space-y-1">
+        <h3 className="text-[12px] font-medium uppercase tracking-[0.2em] text-zinc-200 transition-colors duration-300 group-hover:text-white">
+          {category.name}
+        </h3>
+        <p className="truncate text-[12px] font-light text-zinc-500">
+          {category.description}
+        </p>
       </div>
     </Link>
   );
 }
+

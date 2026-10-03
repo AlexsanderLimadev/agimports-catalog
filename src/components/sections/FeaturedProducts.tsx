@@ -9,18 +9,18 @@ export function FeaturedProducts() {
   if (featured.length === 0) return null;
 
   return (
-    <section className="py-20 md:py-32">
+    <section className="py-24 md:py-36">
       <Container>
         <SectionHeading
-          eyebrow="Seleção AG Imports"
-          title="Os favoritos da nossa coleção."
+          eyebrow="Seleção Exclusiva"
+          title="Os favoritos da nossa coleção"
           action={
             <ActionLink to="/catalogo" variant="secondary" className="hidden sm:inline-flex">
               Ver tudo
             </ActionLink>
           }
         />
-        <div className="mt-10">
+        <div className="mt-14">
           <ProductGrid products={featured} />
         </div>
       </Container>

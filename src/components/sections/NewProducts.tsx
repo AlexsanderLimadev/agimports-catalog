@@ -8,10 +8,10 @@ export function NewProducts() {
   if (items.length === 0) return null;
 
   return (
-    <section className="border-t border-border py-20 md:py-32">
+    <section className="border-t border-white/[0.06] py-24 md:py-36">
       <Container>
-        <SectionHeading eyebrow="Novidades" title="Recém-chegados." />
-        <div className="mt-10">
+        <SectionHeading eyebrow="Novidades" title="Recém chegados" />
+        <div className="mt-14">
           <ProductGrid products={items} />
         </div>
       </Container>

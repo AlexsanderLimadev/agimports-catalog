@@ -1,33 +1,25 @@
 import { useEffect, useState } from "react";
-import { Check, Copy } from "lucide-react";
+import { X } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import heroImage from "@/assets/hero-editorial.jpg";
-import {
-  FIRST_PURCHASE_DISCOUNT_CODE,
-  FIRST_PURCHASE_DISCOUNT_PERCENT,
-  FIRST_PURCHASE_DISCOUNT_STORAGE_KEY,
-  STORE_NAME,
-} from "@/lib/constants";
-import { DISCOUNT_WHATSAPP_URL } from "@/lib/whatsapp";
+import { FIRST_PURCHASE_DISCOUNT_STORAGE_KEY, STORE_NAME } from "@/lib/constants";
+import { GENERAL_WHATSAPP_URL } from "@/lib/whatsapp";
 
-const SHOW_DELAY_MS = 1200;
+const SHOW_DELAY_MS = 2500;
 
 /**
- * Popup de boas-vindas com cupom de primeira compra. Aparece uma vez por
- * navegador (localStorage) — quem já viu não é interrompido de novo.
- * Como o site não tem carrinho/checkout, o cupom funciona por combinação
- * manual: a pessoa copia o código e manda pro WhatsApp junto do pedido.
+ * Popup de boas-vindas que convida o visitante a entrar na lista VIP do WhatsApp.
+ * Aparece uma vez por navegador (localStorage).
  */
 export function FirstPurchaseDiscount() {
   const [open, setOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     let alreadySeen = false;
     try {
       alreadySeen = window.localStorage.getItem(FIRST_PURCHASE_DISCOUNT_STORAGE_KEY) === "1";
     } catch {
-      // localStorage indisponível (modo privado etc.) — trata como "nunca visto".
+      // localStorage indisponível — trata como nunca visto.
     }
     if (alreadySeen) return;
 
@@ -35,78 +27,65 @@ export function FirstPurchaseDiscount() {
     return () => window.clearTimeout(timer);
   }, []);
 
-  function handleOpenChange(next: boolean) {
-    setOpen(next);
-    if (!next) {
-      try {
-        window.localStorage.setItem(FIRST_PURCHASE_DISCOUNT_STORAGE_KEY, "1");
-      } catch {
-        // sem localStorage, sem problema — só volta a aparecer na próxima visita.
-      }
-    }
-  }
-
-  async function handleCopy() {
+  function close() {
+    setOpen(false);
     try {
-      await navigator.clipboard.writeText(FIRST_PURCHASE_DISCOUNT_CODE);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // clipboard indisponível — o código já está visível na tela pra copiar manualmente.
-    }
+      window.localStorage.setItem(FIRST_PURCHASE_DISCOUNT_STORAGE_KEY, "1");
+    } catch { /* sem problema */ }
   }
 
   return (
-    <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="grid max-w-3xl gap-0 overflow-hidden p-0 sm:rounded-none md:grid-cols-2">
+    <Dialog open={open} onOpenChange={(next) => { if (!next) close(); }}>
+      <DialogContent className="grid max-w-2xl gap-0 overflow-hidden p-0 sm:rounded-none md:grid-cols-2">
         <DialogTitle className="sr-only">
-          {FIRST_PURCHASE_DISCOUNT_PERCENT}% de desconto na primeira compra {STORE_NAME}
+          Acesso antecipado às novidades — {STORE_NAME}
         </DialogTitle>
 
+        {/* Imagem editorial */}
         <div className="hidden md:block">
           <img src={heroImage} alt="" className="h-full w-full object-cover" />
         </div>
 
-        <div className="flex flex-col justify-center gap-6 p-8 sm:p-10">
-          <div className="space-y-2">
-            <p className="label-xs text-muted-foreground">Bem-vindo(a) à {STORE_NAME}</p>
+        {/* Conteúdo */}
+        <div className="relative flex flex-col justify-center gap-7 p-8 sm:p-10">
+          <button
+            type="button"
+            onClick={close}
+            aria-label="Fechar"
+            className="absolute right-4 top-4 text-muted-foreground/50 transition-colors hover:text-foreground"
+          >
+            <X className="size-4" strokeWidth={1.5} />
+          </button>
+
+          <div className="space-y-3">
+            <p className="label-xs text-muted-foreground/60">{STORE_NAME}</p>
             <h2 className="text-editorial text-3xl leading-tight">
-              Você ganhou {FIRST_PURCHASE_DISCOUNT_PERCENT}% OFF
+              Acesso antecipado às novidades
             </h2>
-            <p className="text-sm text-muted-foreground">
-              No seu primeiro pedido. Copie o código abaixo e mande junto com sua mensagem no
-              WhatsApp.
+            <p className="text-[13px] font-light leading-relaxed text-muted-foreground">
+              Entre para nossa lista VIP no WhatsApp e receba lançamentos, peças exclusivas e
+              ofertas antes de todo mundo.
             </p>
           </div>
 
-          <button
-            type="button"
-            onClick={handleCopy}
-            className="flex items-center justify-between border border-dashed border-border px-4 py-3 text-left transition-colors hover:border-foreground/40"
-          >
-            <span className="font-mono text-base tracking-widest">
-              {FIRST_PURCHASE_DISCOUNT_CODE}
-            </span>
-            {copied ? (
-              <Check className="h-4 w-4 shrink-0 text-foreground" />
-            ) : (
-              <Copy className="h-4 w-4 shrink-0 text-muted-foreground" />
-            )}
-          </button>
-
-          <a
-            href={DISCOUNT_WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => handleOpenChange(false)}
-            className="label-xs flex h-11 items-center justify-center bg-foreground text-background transition-opacity hover:opacity-90"
-          >
-            Falar no WhatsApp com o cupom
-          </a>
-
-          <p className="text-xs text-muted-foreground">
-            Válido para o primeiro pedido por cliente. Consulte condições pelo WhatsApp.
-          </p>
+          <div className="space-y-3">
+            <a
+              href={GENERAL_WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={close}
+              className="label-xs flex h-11 w-full items-center justify-center bg-foreground text-background transition-opacity hover:opacity-85"
+            >
+              Entrar na lista VIP
+            </a>
+            <button
+              type="button"
+              onClick={close}
+              className="label-xs w-full text-muted-foreground/50 transition-colors hover:text-muted-foreground"
+            >
+              Agora não
+            </button>
+          </div>
         </div>
       </DialogContent>
     </Dialog>

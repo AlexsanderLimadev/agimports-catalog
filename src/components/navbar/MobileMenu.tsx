@@ -9,52 +9,59 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
   return (
     <div
       id="menu-mobile"
-      className="fixed inset-0 z-50 flex flex-col bg-background/98 backdrop-blur-md animate-in fade-in duration-200 md:hidden"
+      className="fixed inset-0 z-50 flex flex-col bg-black/95 backdrop-blur-xl animate-in fade-in duration-300 md:hidden"
     >
-      <div className="flex items-center justify-between px-5 py-5">
-        <span className="label-xs">AG Imports</span>
+      <div className="flex h-16 items-center justify-between px-6 border-b border-white/[0.06]">
+        <span className="text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-100">AG Imports</span>
         <button
           type="button"
           onClick={onClose}
           aria-label="Fechar menu"
-          className="rounded-xl p-2 text-muted-foreground transition-colors hover:text-foreground"
+          className="p-2 text-zinc-400 transition-colors hover:text-white"
         >
-          <X aria-hidden="true" className="size-5" />
+          <X aria-hidden="true" className="size-5" strokeWidth={1.5} />
         </button>
       </div>
 
-      <nav className="flex flex-1 flex-col gap-2 px-5 pt-8">
-        {NAV_LINKS.map((link, i) => (
-          <Link
-            key={link.to}
-            to={link.to}
-            onClick={onClose}
-            style={{ animationDelay: `${i * 50}ms` }}
-            className="reveal border-b border-border py-5 text-2xl font-light"
-          >
-            {link.label}
-          </Link>
-        ))}
+      <nav className="flex flex-1 flex-col px-6 pt-10">
+        <div className="space-y-1">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              onClick={onClose}
+              className="block py-4 text-2xl font-light tracking-tight text-zinc-200 border-b border-white/[0.04] transition-colors hover:text-white"
+            >
+              {link.label}
+            </Link>
+          ))}
+        </div>
 
-        <a
-          href={INSTAGRAM_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={onClose}
-          className="reveal flex items-center gap-3 border-b border-border py-5 text-2xl font-light"
-        >
-          <Instagram aria-hidden="true" className="size-5" /> Instagram
-        </a>
-        <a
-          href={GENERAL_WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={onClose}
-          className="label-xs mt-8 flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 text-primary-foreground"
-        >
-          <MessageCircle aria-hidden="true" className="size-4" /> WhatsApp
-        </a>
+        <div className="mt-8 pt-8 border-t border-white/[0.06] space-y-4">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="flex items-center gap-3 py-2 text-sm text-zinc-400 transition-colors hover:text-white"
+          >
+            <Instagram aria-hidden="true" className="size-4" strokeWidth={1.5} />
+            <span className="text-xs uppercase tracking-[0.15em]">Instagram</span>
+          </a>
+
+          <a
+            href={GENERAL_WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="flex h-12 w-full items-center justify-center gap-2.5 bg-zinc-100 text-black text-xs font-medium uppercase tracking-[0.15em] transition-opacity hover:opacity-90"
+          >
+            <MessageCircle aria-hidden="true" className="size-4" strokeWidth={1.5} />
+            Atendimento WhatsApp
+          </a>
+        </div>
       </nav>
     </div>
   );
 }
+

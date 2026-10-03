@@ -94,20 +94,17 @@ function CatalogPage() {
     });
 
   return (
-    <Container className="py-12 md:py-20">
-      <header className="border-b border-border pb-8">
-        <p className="label-xs text-muted-foreground">Coleção</p>
-        <h1 className="text-editorial mt-4 text-5xl sm:text-6xl">Catálogo</h1>
-        <p className="mt-4 max-w-md text-sm text-muted-foreground">
-          Explore nossa seleção de produtos importados.
-        </p>
+    <Container className="py-16 md:py-24">
+      <header className="mb-12 border-b border-border pb-10">
+        <p className="label-xs text-muted-foreground/50">Coleção</p>
+        <h1 className="text-editorial mt-5 text-[clamp(2.5rem,6vw,4rem)] text-foreground">Catálogo</h1>
       </header>
 
-      <div className="mt-8 space-y-7">
-        <div className="relative max-w-sm">
+      <div className="space-y-8">
+        <div className="relative max-w-xs">
           <Search
             aria-hidden="true"
-            className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-muted-foreground"
+            className="pointer-events-none absolute left-0 top-1/2 size-3.5 -translate-y-1/2 text-muted-foreground/40"
           />
           <input
             type="search"
@@ -115,7 +112,7 @@ function CatalogPage() {
             onChange={(event) => set({ busca: event.target.value })}
             placeholder="Buscar produto..."
             aria-label="Buscar produto"
-            className="w-full rounded-xl border border-border bg-background-2 py-3 pl-11 pr-4 text-sm placeholder:text-muted-foreground focus:border-foreground/40 focus:outline-none"
+            className="w-full border-b border-border bg-transparent py-2 pl-6 pr-3 text-[12px] text-foreground placeholder:text-muted-foreground/40 focus:border-foreground/30 focus:outline-none transition-colors duration-300"
           />
         </div>
 
@@ -139,7 +136,7 @@ function CatalogPage() {
           ]}
         />
 
-        <div className="grid gap-7 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           <ChipRow
             label="Filtros"
             value={search.filtro}
@@ -165,18 +162,18 @@ function CatalogPage() {
         </div>
       </div>
 
-      <div className="mt-12">
+      <div className="mt-16">
         {list.length === 0 ? (
-          <div className="flex flex-col items-center justify-center rounded-xl border border-border py-24 text-center">
-            <h2 className="label-xs">Nenhum produto encontrado</h2>
-            <p className="mt-3 text-sm text-muted-foreground">
+          <div className="flex flex-col items-center justify-center border-t border-border py-28 text-center">
+            <h2 className="label-xs text-muted-foreground/60">Nenhum produto encontrado</h2>
+            <p className="mt-4 text-[12px] font-light text-muted-foreground/40">
               Tente alterar sua busca ou categoria.
             </p>
             {hasFilters ? (
               <button
                 type="button"
                 onClick={clear}
-                className="label-xs mt-8 rounded-xl border border-border px-6 py-3 transition-colors hover:border-foreground/50"
+                className="label-xs mt-10 border-b border-border pb-px text-muted-foreground/60 transition-colors hover:border-foreground/30 hover:text-muted-foreground"
               >
                 Limpar filtros
               </button>
@@ -184,8 +181,8 @@ function CatalogPage() {
           </div>
         ) : (
           <>
-            <p className="label-xs mb-6 text-muted-foreground">
-              {list.length} {list.length === 1 ? "produto" : "produtos"}
+            <p className="label-xs mb-10 text-muted-foreground/40">
+              {list.length} {list.length === 1 ? "peça" : "peças"}
             </p>
             <ProductGrid products={list} priorityCount={4} />
           </>

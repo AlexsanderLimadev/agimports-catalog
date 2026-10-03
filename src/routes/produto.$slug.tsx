@@ -77,14 +77,16 @@ export const Route = createFileRoute("/produto/$slug")({
 function ProductNotFound() {
   return (
     <Container className="flex min-h-[70vh] flex-col items-center justify-center text-center">
-      <p className="label-xs text-muted-foreground">Produto</p>
-      <h1 className="text-editorial mt-4 text-4xl">Produto não encontrado</h1>
-      <p className="mt-3 text-sm text-muted-foreground">Este produto pode ter saído do catálogo.</p>
+      <p className="label-xs text-muted-foreground/50">Produto</p>
+      <h1 className="text-editorial mt-4 text-4xl sm:text-5xl">Peça não encontrada</h1>
+      <p className="mt-3 text-[13px] font-light text-muted-foreground">
+        Este item pode ter saído do catálogo ou o link está incorreto.
+      </p>
       <Link
         to="/catalogo"
-        className="label-xs mt-8 rounded-xl bg-primary px-6 py-3 text-primary-foreground"
+        className="label-xs mt-8 inline-block border-b border-foreground/50 pb-1 text-foreground transition-opacity hover:opacity-75"
       >
-        Ver catálogo
+        Explorar catálogo →
       </Link>
     </Container>
   );
