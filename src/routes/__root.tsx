@@ -126,24 +126,29 @@ function RootShell({ children }: { children: ReactNode }) {
 
 import { CookieBanner } from "@/components/layout/CookieBanner";
 import { GoogleAnalytics } from "@/components/layout/GoogleAnalytics";
+import { QuoteCartProvider } from "@/context/QuoteCartContext";
+import { QuoteDrawer } from "@/components/cart/QuoteDrawer";
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="flex min-h-screen flex-col">
-        <Navbar />
-        <main className="flex-1">
-          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-          <Outlet />
-        </main>
-        <Footer />
-        <FloatingWhatsApp />
-        <FirstPurchaseDiscount />
-        <CookieBanner />
-        <GoogleAnalytics />
-      </div>
+      <QuoteCartProvider>
+        <div className="flex min-h-screen flex-col">
+          <Navbar />
+          <main className="flex-1">
+            {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+            <Outlet />
+          </main>
+          <Footer />
+          <FloatingWhatsApp />
+          <FirstPurchaseDiscount />
+          <CookieBanner />
+          <GoogleAnalytics />
+          <QuoteDrawer />
+        </div>
+      </QuoteCartProvider>
     </QueryClientProvider>
   );
 }

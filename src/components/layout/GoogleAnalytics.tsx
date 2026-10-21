@@ -1,11 +1,11 @@
-﻿import { useEffect } from "react";
+import { useEffect } from "react";
 import { useRouter } from "@tanstack/react-router";
 import { COOKIE_CONSENT_STORAGE_KEY, GA_MEASUREMENT_ID } from "@/lib/constants";
 
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer?: any[];
+    gtag?: (...args: any[]) => void;
   }
 }
 
@@ -24,10 +24,10 @@ export function GoogleAnalytics() {
       script.async = true;
       document.head.appendChild(script);
 
-      window.dataLayer = window.dataLayer || [];
+      const dataLayer = (window.dataLayer = window.dataLayer || []);
       window.gtag = function gtag() {
         // eslint-disable-next-line prefer-rest-params
-        window.dataLayer.push(arguments);
+        dataLayer.push(arguments);
       };
       window.gtag("js", new Date());
       window.gtag("config", GA_MEASUREMENT_ID, {

@@ -1,9 +1,11 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, MessageCircle, X } from "lucide-react";
+import { Instagram, MessageCircle, ShoppingBag, X } from "lucide-react";
 import { INSTAGRAM_URL, NAV_LINKS } from "@/lib/constants";
 import { GENERAL_WHATSAPP_URL } from "@/lib/whatsapp";
+import { useQuoteCart } from "@/context/QuoteCartContext";
 
 export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const { totalItems, openCart } = useQuoteCart();
   if (!open) return null;
 
   return (
@@ -48,6 +50,18 @@ export function MobileMenu({ open, onClose }: { open: boolean; onClose: () => vo
             <Instagram aria-hidden="true" className="size-4" strokeWidth={1.5} />
             <span className="text-xs uppercase tracking-[0.15em]">Instagram</span>
           </a>
+
+          <button
+            type="button"
+            onClick={() => {
+              onClose();
+              openCart();
+            }}
+            className="flex h-12 w-full items-center justify-center gap-2.5 border border-white/20 bg-white/[0.04] text-zinc-200 text-xs font-medium uppercase tracking-[0.15em] transition-colors hover:border-white/40 hover:text-white"
+          >
+            <ShoppingBag aria-hidden="true" className="size-4" strokeWidth={1.5} />
+            Minha Seleção {totalItems > 0 ? `(${totalItems})` : ""}
+          </button>
 
           <a
             href={GENERAL_WHATSAPP_URL}

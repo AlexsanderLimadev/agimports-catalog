@@ -47,7 +47,7 @@ export const CATEGORY_LABELS: Record<string, string> = {
 /** Um path do Lovable (/__l5e/...) nunca resolve fora da infra deles — é o sinal de "sem foto real". */
 export function hasValidImage(product: Pick<Product, "images">) {
   const first = product.images?.[0];
-  return Boolean(first) && !first.startsWith("/__l5e/");
+  return typeof first === "string" && !first.startsWith("/__l5e/");
 }
 
 export const products: Product[] = [

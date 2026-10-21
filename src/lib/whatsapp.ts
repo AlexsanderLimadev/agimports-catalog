@@ -5,10 +5,11 @@ export function getWhatsAppUrl(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-export function getProductWhatsAppUrl(product: Product) {
+export function getProductWhatsAppUrl(product: Product, size?: string) {
+  const sizeText = size ? ` (Tamanho: ${size})` : "";
   const message = product.available
-    ? `Olá! Tenho interesse no produto *${product.name}*. Gostaria de saber mais informações.`
-    : `Olá! O produto *${product.name}* está esgotado. Gostaria de saber se ele estará disponível novamente.`;
+    ? `Olá! Tenho interesse na peça *${product.name}* [${product.brand}]${sizeText}. Gostaria de confirmar disponibilidade e envio.`
+    : `Olá! A peça *${product.name}* [${product.brand}]${sizeText} consta como esgotada. Gostaria de saber sobre reposição.`;
   return getWhatsAppUrl(message);
 }
 

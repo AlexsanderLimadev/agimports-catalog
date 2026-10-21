@@ -1,10 +1,13 @@
 import { Link } from "@tanstack/react-router";
+import { ShoppingBag } from "lucide-react";
 import { ProductImage } from "./ProductImage";
 import { ProductBadge } from "./ProductBadge";
 import { formatPrice } from "@/lib/format";
 import { CATEGORY_LABELS, type Product } from "@/data/products";
+import { useQuoteCart } from "@/context/QuoteCartContext";
 
 export function ProductCard({ product, priority }: { product: Product; priority?: boolean }) {
+  const { addItem } = useQuoteCart();
   const hoverImage = product.images[1];
   const categoryTag = CATEGORY_LABELS[product.category] ?? product.category.toUpperCase();
 
@@ -70,6 +73,23 @@ export function ProductCard({ product, priority }: { product: Product; priority?
           {product.isNew ? <ProductBadge>NOVO</ProductBadge> : null}
           {!product.available ? <ProductBadge>ESGOTADO</ProductBadge> : null}
         </div>
+
+        {/* Botão rápido para adicionar à cotação */}
+        {product.available && (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              addItem(product);
+            }}
+            aria-label={`Adicionar ${cleanTitle} à cotação`}
+            className="absolute bottom-3 right-3 z-10 flex size-9 items-center justify-center border border-white/20 bg-black/80 text-zinc-300 backdrop-blur-md transition-all duration-300 opacity-90 sm:opacity-0 sm:group-hover:opacity-100 hover:border-white hover:bg-white hover:text-black hover:scale-105 active:scale-95"
+            title="Adicionar à cotação"
+          >
+            <ShoppingBag className="size-3.5" strokeWidth={1.5} />
+          </button>
+        )}
       </div>
 
       {/* Legenda editorial: categoria em caixa alta com tracking amplo, título limpo e preço */}
