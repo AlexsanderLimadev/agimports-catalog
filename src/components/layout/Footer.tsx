@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Container } from "@/components/ui/Container";
-import { INSTAGRAM_URL, NAV_LINKS, STORE_NAME } from "@/lib/constants";
+import { CNPJ, EMAIL_CONTATO, ENDERECO, INSTAGRAM_URL, NAV_LINKS, RAZAO_SOCIAL, STORE_NAME } from "@/lib/constants";
 import { GENERAL_WHATSAPP_URL } from "@/lib/whatsapp";
 import mark from "@/assets/ag-imports-mark.png";
 
@@ -48,6 +48,14 @@ export function Footer() {
           </a>
         </nav>
       </Container>
+
+      {(RAZAO_SOCIAL || CNPJ || ENDERECO || EMAIL_CONTATO) && (
+        <Container className="border-t border-border py-4">
+          <p className="text-xs text-muted-foreground">
+            {[RAZAO_SOCIAL, CNPJ && `CNPJ ${CNPJ}`, ENDERECO, EMAIL_CONTATO].filter(Boolean).join(" · ")}
+          </p>
+        </Container>
+      )}
 
       <Container className="flex flex-col-reverse justify-between gap-4 border-t border-border py-6 sm:flex-row sm:items-center">
         <p className="label-xs text-muted-foreground">© 2026 {STORE_NAME}</p>

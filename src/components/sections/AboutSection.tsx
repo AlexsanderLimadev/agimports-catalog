@@ -10,8 +10,8 @@ export function AboutSection() {
         </h2>
         <div>
           <p className="text-[15px] font-light leading-relaxed text-zinc-400">
-            A AG Imports seleciona produtos importados para quem valoriza autenticidade,
-            qualidade real e atendimento próximo. Cada peça é escolhida individualmente.
+            A AG Imports seleciona produtos importados para quem valoriza procedência clara,
+            qualidade e atendimento próximo. Cada peça é escolhida individualmente.
           </p>
           <div className="mt-8">
             <ActionLink to="/sobre" variant="secondary">

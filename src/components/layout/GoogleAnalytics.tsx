@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRouter } from "@tanstack/react-router";
-import { COOKIE_CONSENT_STORAGE_KEY, GA_MEASUREMENT_ID } from "@/lib/constants";
+import { COOKIE_CONSENT_STORAGE_KEY, GA_ID_VALIDO, GA_MEASUREMENT_ID } from "@/lib/constants";
 
 declare global {
   interface Window {
@@ -13,7 +13,7 @@ export function GoogleAnalytics() {
   const router = useRouter();
 
   useEffect(() => {
-    if (!GA_MEASUREMENT_ID) return;
+    if (!GA_ID_VALIDO) return;
 
     const initGA = () => {
       // Se já foi inicializado, ignora
@@ -54,7 +54,7 @@ export function GoogleAnalytics() {
   useEffect(() => {
     const unsubscribe = router.subscribe("onResolved", () => {
       const consent = window.localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
-      if (consent === "accepted" && window.gtag && GA_MEASUREMENT_ID) {
+      if (consent === "accepted" && window.gtag && GA_ID_VALIDO) {
         window.gtag("config", GA_MEASUREMENT_ID, {
           page_path: window.location.pathname,
         });

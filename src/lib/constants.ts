@@ -35,4 +35,17 @@ export const COOKIE_CONSENT_STORAGE_KEY = "ag-imports:cookie-consent";
 
 /** ID de Mensuração do Google Analytics 4 (GA4). Ex: G-XXXXXXXXXX
  *  TODO: preencher com seu ID real para ativar o rastreamento. */
-export const GA_MEASUREMENT_ID = "406672596";
+export const GA_MEASUREMENT_ID = "";
+
+/** Só aceita o formato real do GA4 (G-XXXXXXXXXX). Outro valor desliga o rastreamento. */
+export const GA_ID_VALIDO = /^G-[A-Z0-9]{6,}$/.test(GA_MEASUREMENT_ID);
+
+/** IDENTIFICAÇÃO DO FORNECEDOR (Decreto 7.962/2013, art. 2º).
+ *  Preencha com os dados reais. Enquanto estiverem vazios, o rodapé não mostra a
+ *  identificação, mas o site NÃO deve ser divulgado sem estes dados. */
+export const RAZAO_SOCIAL = "";
+export const CNPJ = "";
+export const ENDERECO = "";
+export const EMAIL_CONTATO = "";
+/** Mesmo e-mail ou outro, usado como canal do titular de dados (LGPD). */
+export const EMAIL_PRIVACIDADE = "";

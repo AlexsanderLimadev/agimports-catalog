@@ -7,8 +7,8 @@ const pillars = [
     text: "Cada produto é escolhido individualmente. Sem atacado, sem reposição automática.",
   },
   {
-    title: "Autenticidade garantida",
-    text: "Trabalhamos apenas com marcas e origens verificadas. Procedência compartilhada abertamente.",
+    title: "Procedência informada",
+    text: "A procedência de cada peça é informada no atendimento, antes da compra.",
   },
   {
     title: "Atendimento humano",
