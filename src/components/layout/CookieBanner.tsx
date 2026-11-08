@@ -29,8 +29,8 @@ export function CookieBanner() {
     <div className="fixed bottom-0 left-0 right-0 z-50 animate-in slide-in-from-bottom-5 duration-500 border-t border-border bg-background p-4 shadow-2xl sm:p-6">
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 sm:flex-row">
         <div className="text-sm text-muted-foreground sm:max-w-2xl">
-          Utilizamos cookies essenciais para o funcionamento do site e cookies analíticos para melhorar e personalizar sua experiência.
-          Ao continuar navegando, você concorda com a nossa{" "}
+          Utilizamos cookies essenciais para o funcionamento do site e, com a sua permissão, cookies analíticos para melhorar sua experiência.
+          Os cookies analíticos só são ativados se você clicar em "Aceitar Todos". Saiba mais na{" "}
           <Link to="/politica-de-privacidade" className="text-foreground underline underline-offset-2 hover:text-foreground/80">Política de Privacidade</Link> e{" "}
           <Link to="/politica-de-cookies" className="text-foreground underline underline-offset-2 hover:text-foreground/80">Política de Cookies</Link>.
         </div>

@@ -4,7 +4,7 @@ import { ActionLink } from "@/components/ui/ActionLink";
 import { STORE_NAME } from "@/lib/constants";
 
 const description =
-  "A AG Imports é uma curadoria de produtos importados selecionados — moda, acessórios e fragrâncias de marcas internacionais, escolhidas uma a uma com critério de qualidade e autenticidade.";
+  "A AG Imports é uma curadoria de produtos importados selecionados: moda, acessórios e fragrâncias de marcas internacionais, escolhidas uma a uma com critério de qualidade e procedência informada.";
 
 export const Route = createFileRoute("/sobre")({
   head: () => ({
@@ -27,7 +27,7 @@ function AboutPage() {
       <header className="mb-16 border-b border-border pb-10">
         <p className="label-xs text-muted-foreground/50">Nossa história</p>
         <h1 className="text-editorial mt-5 max-w-2xl text-[clamp(2rem,5vw,3.5rem)]">
-          Curadoria, autenticidade e atendimento próximo.
+          Curadoria, procedência clara e atendimento próximo.
         </h1>
       </header>
 
@@ -35,16 +35,15 @@ function AboutPage() {
         <div className="space-y-6">
           <p className="text-[15px] font-light leading-relaxed text-muted-foreground">
             A AG Imports nasceu de uma crença simples: você merece acesso a produtos importados de
-            qualidade real — sem ter que navegar por sites complicados, pagar taxas surpresa ou
-            arriscar autenticidade.
+            qualidade real, sem ter que navegar por sites complicados nem pagar taxas surpresa.
           </p>
           <p className="text-[15px] font-light leading-relaxed text-muted-foreground">
-            Cada peça do nosso catálogo passa por uma seleção criteriosa: origem verificada,
+            Cada peça do nosso catálogo passa por uma seleção criteriosa: origem informada,
             acabamento impecável e marcas que realmente valem o que cobram. Não trabalhamos com
             estoque genérico. Preferimos ter menos e ter o certo.
           </p>
           <p className="text-[15px] font-light leading-relaxed text-muted-foreground">
-            O atendimento é sempre direto — você fala com quem escolheu o produto, recebe fotos
+            O atendimento é sempre direto: você fala com quem escolheu o produto, recebe fotos
             reais, tira dúvidas e fecha com total transparência pelo WhatsApp.
           </p>
         </div>
@@ -56,8 +55,8 @@ function AboutPage() {
               text: "Cada produto é escolhido individualmente. Sem atacado, sem reposição automática. Só o que passa no nosso critério de qualidade e estilo.",
             },
             {
-              title: "Autenticidade garantida",
-              text: "Trabalhamos apenas com marcas e origens verificadas. Toda informação de procedência é compartilhada abertamente no atendimento.",
+              title: "Procedência informada",
+              text: "A procedência de cada peça é informada no atendimento, antes da compra.",
             },
             {
               title: "Atendimento humano",

@@ -1,6 +1,6 @@
 ﻿import { createFileRoute } from "@tanstack/react-router";
 import { Container } from "@/components/ui/Container";
-import { STORE_NAME } from "@/lib/constants";
+import { CNPJ, EMAIL_PRIVACIDADE, RAZAO_SOCIAL, STORE_NAME } from "@/lib/constants";
 
 export const Route = createFileRoute("/politica-de-privacidade")({
   head: () => ({
@@ -18,7 +18,7 @@ function PoliticaPrivacidadePage() {
       <header className="border-b border-border pb-8">
         <p className="label-xs text-muted-foreground">Legal</p>
         <h1 className="text-editorial mt-4 max-w-2xl text-4xl sm:text-5xl">Política de Privacidade</h1>
-        <p className="mt-4 text-sm text-muted-foreground">Última atualização: Setembro de 2026</p>
+        <p className="mt-4 text-sm text-muted-foreground">Última atualização: 07/11/2026</p>
       </header>
 
       <div className="prose prose-invert mt-12 max-w-3xl space-y-6 text-muted-foreground">
@@ -36,10 +36,19 @@ function PoliticaPrivacidadePage() {
         </ul>
 
         <h2 className="text-lg text-foreground font-medium mt-10">3. Compartilhamento de Dados</h2>
-        <p>Nós não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing. Seus dados podem ser compartilhados com parceiros logísticos exclusivamente para a entrega dos produtos.</p>
+        <p>Nós não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing. Seus dados podem ser compartilhados com parceiros logísticos exclusivamente para a entrega dos produtos. Os dados de navegação, quando você aceita os cookies analíticos, são tratados pelo Google (Google Analytics), que pode armazená-los fora do Brasil, e o site é hospedado em provedor de nuvem no exterior. Isso configura transferência internacional de dados (LGPD, art. 33).</p>
+        <h2 className="text-lg text-foreground font-medium mt-10">3.1 Base legal e prazo de guarda</h2>
+        <p>Tratamos seus dados para executar o atendimento e a compra que você pediu (LGPD, art. 7º, V), cumprir obrigações legais, como emissão de nota fiscal (art. 7º, II), e, no caso das métricas do site, com o seu consentimento (art. 7º, I), que você pode retirar a qualquer momento recusando ou apagando os cookies. Guardamos os registros de atendimento pelo tempo necessário à compra e ao cumprimento de obrigações fiscais e de garantia, e depois os eliminamos.</p>
 
         <h2 className="text-lg text-foreground font-medium mt-10">4. Seus Direitos</h2>
-        <p>Você tem o direito de solicitar a exclusão ou alteração dos seus dados armazenados em nossos registros de atendimento a qualquer momento, bastando nos enviar uma mensagem pelos nossos canais oficiais de contato.</p>
+        <p>Você tem o direito de solicitar a exclusão ou alteração dos seus dados armazenados em nossos registros de atendimento a qualquer momento, bastando nos enviar uma mensagem pelos nossos canais oficiais de contato. Você também pode pedir confirmação do tratamento, acesso, portabilidade e informação sobre com quem compartilhamos seus dados (LGPD, art. 18). Respondemos em até 15 dias.</p>
+        {(EMAIL_PRIVACIDADE || RAZAO_SOCIAL) && (
+          <p>
+            Controlador: {[RAZAO_SOCIAL, CNPJ && `CNPJ ${CNPJ}`].filter(Boolean).join(", ")}.{" "}
+            {EMAIL_PRIVACIDADE && <>Contato para assuntos de privacidade: {EMAIL_PRIVACIDADE}.</>}
+          </p>
+        )}
+        <p>Você também pode reclamar à Autoridade Nacional de Proteção de Dados (ANPD).</p>
       </div>
     </Container>
   );
